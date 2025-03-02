@@ -1,0 +1,13 @@
+version: "3"
+services:
+  bank:
+    container_name: cycle
+    image: sureshkankatala7799/cycle
+    ports:
+      - "8080:80"
+
+  dm:
+    container_name: dm
+    image: sureshkankatala7799/dm
+    ports:
+      - "8081:80"
