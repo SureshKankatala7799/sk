@@ -5,6 +5,10 @@ services:
     build: ./bank
     ports:
       - "1111:80"
+    volumes:
+      - "bank-volume"
+    networks:
+      - "bank"
 
   flight:
     container_name: flight
@@ -24,3 +28,6 @@ services:
     ports:
       - "4444:80"
 
+networks:
+  bank:
+    driver: bridge
